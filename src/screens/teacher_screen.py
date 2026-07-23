@@ -9,7 +9,7 @@ from src.database.db import check_teacher_exists, create_teacher, teacher_login,
 from src.components.dialog_create_subject import create_subject_dialog
 from src.components.dialog_share_subject import share_subject_dialog
 from src.components.dialog_add_photo import add_photos_dialog
-
+c
 from src.pipelines.face_pipeline import predict_attendance
 from src.components.dialog_attendance_results import attendance_result_dialog
 import numpy as np
@@ -309,11 +309,8 @@ def teacher_screen_login():
     st.space()
 
 
-    st.markdown("<p style='color:black; font-weight:600;'>Enter username</p>", unsafe_allow_html=True)
-      teacher_username = st.text_input("", placeholder="ananyaroy", label_visibility="collapsed")
-
-    st.markdown("<p style='color:black; font-weight:600;'>Enter password</p>", unsafe_allow_html=True)
-      teacher_pass = st.text_input("", type="password", placeholder="Enter password", label_visibility="collapsed")
+    teacher_username = st.text_input("Enter username", placeholder='ananyaroy')
+    teacher_pass = st.text_input("Enter password", type='password', placeholder="Enter password")
 
     st.divider()
 
