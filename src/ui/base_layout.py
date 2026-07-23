@@ -49,6 +49,25 @@ def style_base_layout():
             h1, h2, h3, h4, h5, h6 {
                 color: black !important;
             }    
+            p, span, div {
+                color: black;
+            }
+
+            /* Streamlit Info Box */
+            [data-testid="stAlertContainer"] * {
+                color: black !important;
+            }
+
+             /* Labels */
+            label {
+               color: black !important;
+            }
+
+         /* Text inside expanders */
+           details {
+              color: black !important;
+           }
+
             #MainMenu, footer, header {
                 visibility: hidden;
             }
