@@ -303,5 +303,4 @@ def student_screen():
 
     footer_dashboard()
 
-        
-    footer_dashboard()
+    
