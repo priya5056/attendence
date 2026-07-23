@@ -301,14 +301,19 @@ def teacher_screen_login():
             st.session_state['login_type'] = None
             st.rerun()
 
-    st.header('Login using password', text_alignment='center')
+    st.markdown(
+         "<h1 style='color:black;'>Login Using Password</h3>",
+          unsafe_allow_html=True
+    )
     st.space()
     st.space()
 
 
-    teacher_username = st.text_input("Enter username", placeholder='ananyaroy')
+    st.markdown("<p style='color:black; font-weight:600;'>Enter username</p>", unsafe_allow_html=True)
+      teacher_username = st.text_input("", placeholder="ananyaroy", label_visibility="collapsed")
 
-    teacher_pass = st.text_input("Enter password", type='password', placeholder="Enter password")
+    st.markdown("<p style='color:black; font-weight:600;'>Enter password</p>", unsafe_allow_html=True)
+      teacher_pass = st.text_input("", type="password", placeholder="Enter password", label_visibility="collapsed")
 
     st.divider()
 
@@ -358,7 +363,10 @@ def teacher_screen_register():
 
 
 
-    st.header('Register your teacher profile')
+    st.markdown(
+          "<h3 style='color:black;'>Register Your Teacher Profile</h3>",
+           unsafe_allow_html=True
+    )
 
     st.space()
     st.space()
