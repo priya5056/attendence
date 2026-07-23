@@ -46,7 +46,9 @@ def style_base_layout():
 
                 
          /* Hide Top Bar of streamlit */
-                
+            h1, h2, h3, h4, h5, h6 {
+                color: black !important;
+            }    
             #MainMenu, footer, header {
                 visibility: hidden;
             }
