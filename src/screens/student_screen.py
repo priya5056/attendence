@@ -21,7 +21,10 @@ def student_dashboard():
     with c1:
         header_dashboard()
     with c2:
-        st.subheader(f"""Welcome, {student_data['name']} """)
+        st.markdown(
+                f"<h3 style='color:black;'>Welcome, {student_data['name']}</h3>",
+                unsafe_allow_html=True
+        )
         if st.button("Logout", type='secondary', key='loginbackbtn', shortcut="control+backspace"):
             st.session_state['is_logged_in'] = False
             del st.session_state.student_data 
@@ -32,7 +35,10 @@ def student_dashboard():
 
     c1, c2 =st.columns(2)
     with c1:
-        st.header('Your Enrolled Subjects')
+        st.markdown(
+                "<h2 style='color:black;'>Your Enrolled Subjects</h2>",
+                unsafe_allow_html=True
+            )
     with c2:
         if st.button('Enroll in Subject', type='primary', width='stretch'):
             enroll_dialog()
